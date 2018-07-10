@@ -21,13 +21,7 @@ int main(int argc, char* argv[])
 	SDL_Surface* screenSurface=NULL;
 	SDL_Renderer* renderer=NULL;
 	SDL_Init(SDL_INIT_VIDEO);
-	window=SDL_CreateWindow("BMP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 320, 240, SDL_WINDOW_SHOWN);
-	screenSurface=SDL_GetWindowSurface(window);
-	SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0XFF));
-	SDL_UpdateWindowSurface(window);
-	//SDL_Delay(2000);
-	renderer=SDL_CreateRenderer(window, -1,0);
-
+	
 
    Uint8* fileContents=new Uint8[sz];
 
@@ -77,6 +71,11 @@ int main(int argc, char* argv[])
 
 
 	//SDL_RenderClear(renderer);
+	window=SDL_CreateWindow("BMP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
+	screenSurface=SDL_GetWindowSurface(window);
+	renderer=SDL_CreateRenderer(window, -1,0);
+
+
 	int pixel=0;
 
 	for(int i=0; i<colSize; i++)
