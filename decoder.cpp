@@ -25,10 +25,12 @@ int main(int argc, char* argv[])
 
    Uint8* fileContents=new Uint8[sz];
 
-    for(int i=0; i<sz; i++)
-    {
-    	instream.read((char*)&fileContents[i], 1);
-    }
+    // for(int i=0; i<sz; i++)
+    // {
+    // 	instream.read((char*)&fileContents[i], 1);
+    // }
+
+   instream.read((char*)fileContents, sz);
 
     //why whole block doesn't work
 
