@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 			{
 			//SDL_RenderClear(renderer);
 			SDL_SetRenderDrawColor(renderer,r, g, b, 255);
-			SDL_RenderDrawPoint(renderer,pixel,240-i);
+			SDL_RenderDrawPoint(renderer,pixel,height-i);
 //			SDL_Delay(1);
 		//	cout<<i<<" "<<pixel<<" "<<(int)r<<" "<<g<<" "<<b<<" "<<endl;
 			pixel++;
